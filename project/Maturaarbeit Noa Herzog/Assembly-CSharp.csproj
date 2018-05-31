@@ -59,7 +59,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Controller.cs" />
+    <Compile Include="Assets\Scripts\Direction.cs" />
+    <Compile Include="Assets\Scripts\MoveShot.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Noa/Documents/Schule/MA_NoaHerzog_19Md/project/Maturaarbeit Noa Herzog/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
