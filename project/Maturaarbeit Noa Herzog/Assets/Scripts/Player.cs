@@ -9,9 +9,12 @@ public class Player : MonoBehaviour {
     int x, y, xdelta, ydelta;
     Vector3 pos;
     //Direction
-    
     Direction headDir;
+
+    //Shooting
     public GameObject shot;
+    public Text ammon;
+    public int ammo;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +22,8 @@ public class Player : MonoBehaviour {
         y = 0;
         x = 0;
         headDir = Direction.North;
+        ammo = 5;
+        ammon.text = ammo + "/5";
         
    
 	}
@@ -57,10 +62,21 @@ public class Player : MonoBehaviour {
     //Shooting
     public void Shoot()
     {
-        shot.GetComponent<MoveShot>().setShot(this, headDir);
-        Instantiate(shot);
+        if (ammo > 0)
+        {
+            shot.GetComponent<MoveShot>().setShot(this, headDir);
+            Instantiate(shot);
+            ammo--;
+            ammon.text = ammo + "/5";
+
+        }
         
         
+    }
+    public void Reloadammo()
+    {
+        ammo = 5;
+        ammon.text = ammo + "/5";
     }
 
     

@@ -52,6 +52,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c191ff9db069d246a91b89fe502c36f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  p: {fileID: 0}
+  direction: 2
+  shot: {fileID: 1511904706383768}
 --- !u!212 &212939520101707958
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -7,6 +7,7 @@ public class MoveShot : MonoBehaviour {
     int xDelta, yDelta;
     public Player p;
     public Direction direction;
+    public GameObject shot;
 
 	public void setShot(Player p, Direction direction)
     {
@@ -41,8 +42,13 @@ public class MoveShot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        
         float x = transform.position.x + xDelta;
         float y = transform.position.y + yDelta;
+        if (x > 200 || x < -200  || y < -110 || y > 110)
+        {
+            Destroy(shot);
+        }
         Vector3 pos = new Vector3(x, y, 0); 
         transform.SetPositionAndRotation(pos, transform.rotation);
     }
